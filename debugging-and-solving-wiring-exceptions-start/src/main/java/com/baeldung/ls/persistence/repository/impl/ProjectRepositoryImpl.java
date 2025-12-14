@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.baeldung.ls.persistence.model.Project;
 import com.baeldung.ls.persistence.repository.IProjectRepository;
 
-@Repository
+//@Repository
 public class ProjectRepositoryImpl implements IProjectRepository {
 
     private List<Project> projects = new ArrayList<>();
