@@ -35,3 +35,8 @@ the *MockitoAnnotations#initMocks* directive has been deprecated in favor of *op
         closeable.close();
     }
 
+## M3L6
+Simply put, **PropertySource is an annotation used to configure additional sources of properties** – i.e. additional property files – for our Spring Environment.
+
+Similarly, TestPropertySource is an annotation that can be used to configure property file sources for our tests.
+A property defined using this testing-focused annotation will have *a higher priority than the same property defined in main property sources*.
