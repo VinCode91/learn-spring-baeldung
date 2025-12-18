@@ -1,5 +1,6 @@
 package com.baeldung.ls;
 
+import com.baeldung.ls.persistence.model.Equipage;
 import com.baeldung.ls.persistence.model.PirateCrew;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
@@ -19,6 +20,9 @@ public class LsApp {
     @Autowired
     private PirateCrew pirateCrew;
 
+    @Autowired
+    private Equipage equipage;
+
     public static void main(final String... args) {
         SpringApplication.run(LsApp.class, args);
     }
@@ -27,6 +31,7 @@ public class LsApp {
     public void postConstruct() {
         LOG.info("Additional property {}", additional);
         LOG.info("@Configuration properties example with Mugiwara: " + pirateCrew);
+        LOG.info("Exemple avec @EnableConfigurationProperties et @Constructorbinding pour les Mugiwara: " + equipage);
     }
 
 }

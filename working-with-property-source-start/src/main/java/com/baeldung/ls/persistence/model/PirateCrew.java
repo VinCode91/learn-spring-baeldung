@@ -4,8 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.bind.Name;
 import org.springframework.stereotype.Component;
 
-//@Component
-//@ConfigurationProperties(prefix = "pirate-crew")
+@Component
+@ConfigurationProperties(prefix = "pirate-crew")
 public class PirateCrew {
 
     private Integer number;
