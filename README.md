@@ -40,3 +40,6 @@ Simply put, **PropertySource is an annotation used to configure additional sourc
 
 Similarly, TestPropertySource is an annotation that can be used to configure property file sources for our tests.
 A property defined using this testing-focused annotation will have *a higher priority than the same property defined in main property sources*.
+
+## M3L7
+Index of latest spring boot release default properties: https://docs.spring.io/spring-boot/appendix/application-properties/index.html
