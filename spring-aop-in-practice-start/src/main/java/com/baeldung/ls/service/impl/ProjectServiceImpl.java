@@ -21,7 +21,11 @@ public class ProjectServiceImpl implements IProjectService {
 
     @Override
     public Optional<Project> findById(Long id) {
-        return projectRepository.findById(id);
+        Optional<Project> proj = projectRepository.findById(id);
+        if (proj.isPresent())
+            return proj;
+        else
+            throw new RuntimeException("No project found with id " + id);
     }
 
     @Override
