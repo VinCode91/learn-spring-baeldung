@@ -26,3 +26,15 @@ Due to this proxy-based nature of Spring AOP, the advices apply only on public m
 **pEL is quite a powerful expression language which basically supports querying and manipulating the full object graph at runtime**
 
 When referencing bean in SpEL expression, make sure to use actual bean names (mentioned for example in @Qualifier)
+
+## M9L4:: Events and listeners
+Main feature of events: **allowing us to write loosely coupled components that don’t have to be closely connected**.
+Useful to limit dependency between beans.
+
+**An Event is just a regular class**.
+**The event listener needs to be a Spring bean. It gets notified when the event is fired**. We can have multiple
+listeners registered and listening for the same event.
+By default, events are entirely *synchronous* since they're sent and processed in the same thread.
+**Meaning that the publish envent method blocks until all listeners finish processing the event**
+
+***ATTENTION***: if an event type is matched by several @EventListener handlers, all handlers will be executed when event is published
